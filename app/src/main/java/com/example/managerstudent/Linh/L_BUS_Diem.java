@@ -153,6 +153,7 @@ public class L_BUS_Diem extends AppCompatActivity implements AdapterView.OnItemS
         btnClear = findViewById(R.id.d_btnClear);
     }
 
+
     // Click List View
     private void ClickListView(L_DTO_SinhVien sv, L_DTO_Diem diem) {
         layoutDiem.setVisibility(View.VISIBLE);
