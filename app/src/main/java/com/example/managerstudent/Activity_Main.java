@@ -20,7 +20,6 @@ import com.example.managerstudent.fragment.Fragment_Home;
 import com.google.android.material.navigation.NavigationView;
 
 public class Activity_Main extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private Toolbar toolbar;

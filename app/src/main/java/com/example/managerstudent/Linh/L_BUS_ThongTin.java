@@ -185,7 +185,7 @@ public class L_BUS_ThongTin extends AppCompatActivity implements AdapterView.OnI
                     if (dsSinhVien.size() == 0)
                         Toast.makeText(L_BUS_ThongTin.this, "Danh Sách Rỗng!!.", Toast.LENGTH_SHORT).show();
                     else
-                        Toast.makeText(L_BUS_ThongTin.this, "Chọn Item Để Xoá!!.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(L_BUS_ThongTin.this, "Chọn SV Để Xoá!!.", Toast.LENGTH_SHORT).show();
                 }
 
                 Sua_SoLuongSV();

@@ -169,14 +169,14 @@ public class L_BUS_Diem extends AppCompatActivity implements AdapterView.OnItemS
 
         if (sv.get_Khoa().equals("DO HOA")) {
             tvDiem1.setText("PS");
-            tvDiem2.setText("Ve");
-            tvDiem3.setText("Chup");
+            tvDiem2.setText("Vẽ");
+            tvDiem3.setText("Paint");
         }
 
         if (sv.get_Khoa().equals("DIEN TU")) {
-            tvDiem1.setText("DienTu1");
-            tvDiem2.setText("DienTu2");
-            tvDiem3.setText("DienTu3");
+            tvDiem1.setText("Điện 1");
+            tvDiem2.setText("Điện 2");
+            tvDiem3.setText("QPAN");
         }
 
         edtDiem1.setText(diem.get_Diem1());
