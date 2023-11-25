@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/l_ms_login_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Linh.L_BUS_Login">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="600dp"
+        android:text="Manager Student "
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20pt"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-300dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <!--User-->
+        <EditText
+            android:id="@+id/ms_login_edtUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/l_login_textbox_background"
+            android:gravity="start"
+            android:hint="User"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <!--Password-->
+        <EditText
+            android:id="@+id/tt_edtNamHoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/l_login_textbox_background"
+            android:gravity="start"
+            android:hint="Password"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ms_login_btnLogin"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="#66BB6A"
+        android:text="Login"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null" />
+
+</LinearLayout>

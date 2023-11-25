@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top|start"
+    android:id="@+id/gui_info"
+    android:orientation="vertical"
+    tools:context=".Linh.L_BUS_ThongTin">
+
+    <!--    APP NAME-->
+
+    <!-- INFORMATION -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#673AB7"
+        android:gravity="center"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/tt_btnBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#673AB6"
+            android:drawableBottom="@drawable/l_baseline_keyboard_backspace_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-50dp"
+            android:layout_weight="1"
+            android:text="SINH VIÊN"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- LIST VIEW -->
+
+    <LinearLayout
+        android:id="@+id/tt_layoutThongTin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E8EAF6"
+        android:gravity="center_horizontal|top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/tt_imgAvatar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="5dp"
+                android:src="@drawable/l_avatar_nam"></ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <EditText
+                    android:id="@+id/tt_edtMSSV"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:hint="MSSV"
+                    android:inputType="number"
+                    android:textColor="#43A047"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/tt_edtTen"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:hint="Họ Tên"
+                    android:inputType="text"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/tt_RadioGroupGioiTinh"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/tt_rbNam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:checked="true"
+                android:text="Nam"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/tt_rbNu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nữ"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+        <!-- SEX -->
+
+        <!-- INFO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <!--DOB-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="Ngày Sinh"
+                        android:textAlignment="textStart"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/tt_edtNgaySinh"
+                        android:layout_width="181dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Birth Of Day"
+                        android:inputType="datetime|date"
+                        android:paddingLeft="20dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:text="Năm Học"
+                        android:textAlignment="textEnd"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/tt_edtNamHoc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:hint="Year Course"
+                        android:inputType="number"
+                        android:paddingRight="15dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Cource-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#E7E9F5"
+            android:gravity="center|end">
+
+            <!--  LAYOUT-BUTTONS-CRUD -->
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Khoa"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/tt_SpinnerKhoa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center|start" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|end">
+                    <!--BTN-Add-->
+                    <Button
+                        android:id="@+id/tt_btnThem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginRight="5dp"
+                        android:text="THÊM" />
+
+                    <!--BTN-Edit-->
+
+                    <!--BTN-Remove-->
+
+                    <Button
+                        android:id="@+id/tt_btnSua"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="SỬA" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|end">
+
+                    <Button
+                        android:id="@+id/tt_btnXoa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="XOÁ" />
+
+                    <Button
+                        android:id="@+id/tt_btnClear"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="CLEAR" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--  LAYOUT-BUTTONS-ADVANCE -->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Danh Sách Sinh Viên : " />
+
+        <TextView
+            android:id="@+id/tt_tvSoLuongSV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="So Luong"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/thongtin_lvSinhVien"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4103A9F4"
+        android:padding="10dp"
+        android:textAlignment="textStart"></ListView>
+
+    <!-- BUTTONS -->
+</LinearLayout>
