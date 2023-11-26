@@ -21,6 +21,9 @@ public class DBAccount extends SQLiteOpenHelper {
 
     public  final  String confirmPass="ConfirmPass";
     public final String tbAccCount="tbAccCount";
+
+
+
     public DBAccount(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, "ManagerStudent", factory, 1);
     }

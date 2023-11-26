@@ -47,42 +47,29 @@ public class L_BUS_Login extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 M_Account acount = new M_Account();
+//                for (M_Account item : dbacconut.getListAccount()) {
+//                    if (item.getNameAcc().equals(edtUser.getText().toString().trim())) {
+//                        acount = item;
+//                        break;
+//                    }
+//
+//                }
                 for (M_Account item : dbacconut.getListAccount()) {
-                    if (item.getNameAcc().equals(edtUser.getText().toString().trim())) {
-                        acount = item;
-                        break;
+                    if (item.getNameAcc().equals(edtUser.getText().toString().trim()) ) {
+                        if (item.getPass().equals(edtPassword.getText().toString().trim()) ) {
+                            Intent inte = new Intent(L_BUS_Login.this, Activity_Main.class);
+                            startActivity(inte);
+                        }
+                        else {
+                            Toast.makeText(L_BUS_Login.this, "Mat Khau Sai", Toast.LENGTH_SHORT).show();
+                        }
                     }
-                }
-                if (acount.getNameAcc()!="") {
-                    if (acount.getPass().equals(edtPassword.getText().toString().trim())) {
-                        Intent inte = new Intent(L_BUS_Login.this, Activity_Main.class);
-                        startActivity(inte);
-                    } else {
-                        Toast.makeText(L_BUS_Login.this,"Mat Khau Sai", Toast.LENGTH_SHORT).show();
-//                        AlertDialog.Builder da = new AlertDialog.Builder(L_BUS_Login.this);
-//                        da.setTitle("Thông Báo");
-//                        da.setMessage("Mật Khẩu Sai");
-//                        da.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialogInterface, int i) {
-//                                dialogInterface.cancel();
-//                            }
-//                        });
-                    }
-                }
-                else {
-                    Toast.makeText(L_BUS_Login.this,"tai khoan khong ton tai", Toast.LENGTH_SHORT).show();
-//                    AlertDialog.Builder da = new AlertDialog.Builder(L_BUS_Login.this);
-//                    da.setTitle("Thông Báo");
-//                    da.setMessage("Tai khoan khong ton tai");
-//                    da.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialogInterface, int i) {
-//                            dialogInterface.cancel();
-//                        }
-//                    });
-                }
+                    else {
+                        Toast.makeText(L_BUS_Login.this, "Tai khoan khong ton tai", Toast.LENGTH_SHORT).show();
 
+                    }
+
+                }
             }
         });
         btnSignUp.setOnClickListener(new View.OnClickListener() {

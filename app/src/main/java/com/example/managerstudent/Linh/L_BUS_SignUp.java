@@ -32,10 +32,16 @@ DBAccount dbAccount = new DBAccount(this, null, null, 1);
             public void onClick(View v) {
                 dbAccount.addAccount(edtUser.getText().toString().trim(), edtPassword.getText().toString().trim());
                 if (dbAccount.getListAccount().size() > 0) {
-                    Intent inte = new Intent(L_BUS_SignUp.this, L_BUS_Login.class);
-                    startActivity(inte);
+                    if(edtPassword.getText().toString().trim().equals(edtConfirmPassword.getText().toString().trim())){
+                        Intent inte = new Intent(L_BUS_SignUp.this, L_BUS_Login.class);
+                        startActivity(inte);
+                        Toast.makeText(L_BUS_SignUp.this, "dang ki thanh cong", Toast.LENGTH_SHORT).show();
+                    }else {
+                        Toast.makeText(L_BUS_SignUp.this,"mat khau khong trung nhau" , Toast.LENGTH_SHORT).show();
+
+                    }
                 }
-                Toast.makeText(L_BUS_SignUp.this, String.valueOf(dbAccount.getListAccount().size()), Toast.LENGTH_SHORT).show();
+
             }
         });
         btnCear.setOnClickListener(new View.OnClickListener() {
