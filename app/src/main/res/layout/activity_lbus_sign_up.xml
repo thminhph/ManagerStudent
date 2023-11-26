@@ -16,7 +16,7 @@
         android:text="Manager Student "
         android:textAlignment="center"
         android:textColor="#FF9800"
-        android:textSize="40dp"
+        android:textSize="20pt"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -26,13 +26,6 @@
         android:orientation="vertical"
         android:gravity="center">
         <!--User-->
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="261dp"
-            android:layout_height="206dp"
-            android:layout_marginVertical="10dp"
-            android:src="@drawable/l_home_tdc_background" />
 
         <EditText
             android:id="@+id/edtUser"
@@ -59,27 +52,38 @@
             android:padding="10dp"
             android:textSize="34sp"
             android:textStyle="bold" />
-
+        <EditText
+            android:id="@+id/edtConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/l_login_textbox_background"
+            android:gravity="start"
+            android:hint="Confirm Password"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textSize="34sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnSignIn"
+        android:id="@+id/btnClear"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="#66BB6A"
-        android:text="Sign In"
+        android:text="Clear"
         android:textSize="30dp"
         android:textStyle="bold"
         android:layout_marginHorizontal="70dp"
         app:backgroundTint="@null" />
 
     <Button
-        android:id="@+id/btnSignUp"
+        android:id="@+id/btnConfirm"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
         android:background="#66BB6A"
-        android:text="Sign Up"
+        android:text="Confirm"
         android:textSize="30dp"
         android:textStyle="bold"
         app:backgroundTint="@null"

@@ -12,28 +12,11 @@ import com.example.managerstudent.Minh.models.Khoa;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DBKhoa extends SQLiteOpenHelper {
-
+public class DBKhoa extends DBAccount {
 
     public DBKhoa(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, "QLSV", factory, 1);
+        super(context, "ManagerStudent", factory, 1);
     }
-
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        String sqlKhoa = "Create table tbKhoa (makhoa text primary key, tenkhoa text)";
-        db.execSQL(sqlKhoa);
-
-        String sqlChuyenNganh = "Create table tbChuyenNganh (manganh text primary key, tennganh text, makhoa text)";
-        db.execSQL(sqlChuyenNganh);
-
-        String sqlHK = "Create table tbHocKy (mahk text primary key, tenhocky text, manganh text)";
-        db.execSQL(sqlHK);
-
-        String sqlMH = "Create table tbMonHoc (mamh text primary key,tenmh text,stc text, mahk text)";
-        db.execSQL(sqlMH);
-    }
-
     public void ThemDLKhoa(Khoa khoa) {
         String sql = "insert into tbKhoa values(?,?)";
         this.getWritableDatabase().execSQL(sql, new String[]{khoa.getMaKhoa(),khoa.getTenKhoa()});

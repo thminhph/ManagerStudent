@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.managerstudent.Linh.L_BUS_Diem;
+import com.example.managerstudent.Linh.L_BUS_Login;
 import com.example.managerstudent.Linh.L_BUS_ThongTin;
 import com.example.managerstudent.Minh.KhoaActivity;
 import com.example.managerstudent.fragment.Fragment_Home;
@@ -92,6 +93,11 @@ public class Activity_Main extends AppCompatActivity implements NavigationView.O
 
         if (id == R.id.menu_nav_Khoa) {
             Intent intent = new Intent(this, KhoaActivity.class);
+            startActivity(intent);
+        }
+        if(id==R.id.menu_nav_Dangxuat)
+        {
+            Intent intent = new Intent(this, L_BUS_Login.class);
             startActivity(intent);
         }
 

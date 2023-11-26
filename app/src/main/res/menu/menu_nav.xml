@@ -21,7 +21,12 @@
             <item
                 android:id="@+id/menu_nav_Khoa"
                 android:icon="@drawable/baseline_library_books_24"
-                android:title="Quản Lý Khoa-Ngành-HK" />
+                android:title="Quản Lý Khoa-Ngành-Môn Học" />
+            <item
+                android:id="@+id/menu_nav_Dangxuat"
+                android:icon="@drawable/baseline_logout_24"
+                android:title="Đăng Xuất" />
+
         </menu>
     </item>
 
